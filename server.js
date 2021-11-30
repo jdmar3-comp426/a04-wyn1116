@@ -31,11 +31,6 @@ app.post("/app/new/user", (req, res) => {
 		id: req.params.id
 	});
 	res.status(201).json({"message":"1 record created: ID @id (201)"});
-	stmt.run({
-		username: req.body.user,
-		password: req.body.pass,
-		id: req.params.id
-	});
 });
 
 // READ a list of all users (HTTP method GET) at endpoint /app/users/
